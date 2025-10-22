@@ -1,0 +1,39 @@
+# Node.js dependencies
+node_modules/
+
+# TypeScript build artifacts
+dist/
+build/
+*.tsbuildinfo
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files (if you ever add them)
+.env
+.env.local
+.env.*.local
+
+# macOS system files
+.DS_Store
+
+# VS Code / IDE settings
+.vscode/
+.idea/
+
+# Auto-generated or temporary data
+data/feeds_parsed.xml
+feeds_parsed.xml
+
+# Puppeteer cache / Chromium downloads (optional)
+.puppeteer/
+
+# Coverage reports or test artifacts
+coverage/
+
+# OS files
+Thumbs.db
