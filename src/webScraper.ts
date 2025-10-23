@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 
+// Define an async function that fetches player names from a given match URL
 export async function fetchMatchPlayers(url: string): Promise<string[]> {
   const browser = await puppeteer.launch({ headless: true }); // headless mode
   const page = await browser.newPage();

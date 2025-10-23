@@ -7,6 +7,7 @@ export function extractXmlFromRtf(filePath: string): string {
   const match = content.match(/<PutDataRequest[\s\S]*?<\/PutDataRequest>/);
   if (!match) throw new Error("No <PutDataRequest> block found in RTF file.");
 
+// Save the extracted XML portion to a separate file for debugging or verification
   fs.writeFileSync("data/feeds_parsed.xml", match[0]);
   console.log("Extracted XML saved as data/feeds_parsed.xml");
   return match[0];
@@ -18,6 +19,7 @@ export async function parseXmlFeed(xmlText: string): Promise<string[]> {
   const events = result?.PutDataRequest?.Event || [];
   const players: string[] = [];
 
+//Loop through each Event elements in the XML
   for (const event of events) {
     for (const [, value] of Object.entries(event)) {
       if (Array.isArray(value)) {
@@ -33,6 +35,7 @@ export async function parseXmlFeed(xmlText: string): Promise<string[]> {
     }
   }
 
+  //Log the full list of parsed players for debuging 
   console.log("Parsed players from XML:", players);
   return players;
 }
