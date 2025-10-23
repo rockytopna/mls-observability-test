@@ -26,10 +26,10 @@ npx ts-node src/index.ts
 
 How it works:
 
-WebScraper.ts : Uses Puppeteer to fetch players from the MSL website. 
-xmlParser.ts : Extract and parses XML from "feeds.rtf" to retreive player data
-compare.ts : Normalizes text  and comares both lists
-index.ts : Orchestrates all steps and logs clear output to the console. 
+* WebScraper.ts : Uses Puppeteer to fetch players from the MSL website. 
+* xmlParser.ts : Extract and parses XML from "feeds.rtf" to retreive player data
+* compare.ts : Normalizes text  and comares both lists
+* index.ts : Orchestrates all steps and logs clear output to the console. 
 
 
 
